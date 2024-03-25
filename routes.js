@@ -8,9 +8,12 @@ const cadastro = require('./src/controllers/cadastro');
 // Iniciando as rotas
 route.get('/', home.pagInicialGet);
 
-route.get('/CadastroSala', cadastro.pagCadastroSalaGet);
-route.post('/CadastroSala', cadastro.salaInsert);
 
-route.get('/cadastroAlunos', cadastro.pagCadastroAlunoGet);
+route.get('/CadastroSala', cadastro.pagCadastroSalaGet); //url
+route.post('/CadastroSala', cadastro.salaInsert);  //form
+
+
+route.get('/CadastroAluno', cadastro.aluno);
+route.post('/CadastroAluno', cadastro.alunoInsert);
 
 module.exports = route;
