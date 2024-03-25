@@ -7,6 +7,7 @@ const cadastro = require('./src/controllers/cadastro');
 
 // Iniciando as rotas
 route.get('/', home.pagInicialGet);
+route.post('/', home.pagInicialPost);
 
 
 route.get('/CadastroSala', cadastro.pagCadastroSalaGet); //url

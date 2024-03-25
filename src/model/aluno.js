@@ -30,7 +30,8 @@ const aluno = database.define('Aluno', { // DEFINE CRIA A TABELA
 //foreign key
 aluno.belongsTo(sala, {
     constraint: true, //garante integridade referencial
-    foreignKey: 'IDSala'
+    foreignKey: 'IDSala',
+    allowNull: false
 });
 // Exportando essa tabela
 module.exports = aluno;

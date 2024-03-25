@@ -41,11 +41,11 @@ module.exports = {
         let foto = 'usuario.jfif';
         // Criando aluno no banco de dados
         await aluno.create({
-        Nome: dados.nome,
-        Idade: dados.idade,
-        Sexo: dados.sexo,
-        IDSala: dados.sala,
-        Foto: foto
+            Nome: dados.nome,
+            Idade: dados.idade,
+            Sexo: dados.sexo,
+            IDSala: dados.select, //select porque é o name do meu select
+            Foto: foto
         });
         // Redirecionar para a página principal
         res.redirect('/');
